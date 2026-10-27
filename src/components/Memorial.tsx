@@ -9,9 +9,12 @@ export function Memorial() {
         <p className="memorial-intro">За каждой спасённой жизнью — чья-то семья и чьё-то будущее. Этот огонёк — знак благодарности Зинаиде Михайловне.</p>
 
         <div className="memorial-stage">
-          <div className="candle" role="img" aria-label="Вечно горящий огонёк памяти">
+          <div className="candle" role="img" aria-label="Вечно горящая свеча памяти">
             <span className="candle-glow" aria-hidden="true" />
             <span className="candle-flame" aria-hidden="true" />
+            <span className="candle-wick" aria-hidden="true" />
+            <span className="candle-wax" aria-hidden="true" />
+            <span className="candle-base" aria-hidden="true" />
           </div>
         </div>
 
