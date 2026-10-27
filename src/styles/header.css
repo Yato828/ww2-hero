@@ -1,0 +1,26 @@
+.site-header { position: sticky; top: 0; z-index: 20; background: #1a1a1af2; backdrop-filter: blur(16px); border-bottom: 1px solid var(--color-line); }
+.header-inner { display: flex; align-items: center; gap: 38px; min-height: var(--header-height); }
+.brand { display: flex; align-items: center; gap: 15px; flex-shrink: 0; text-decoration: none; }
+.brand-name { color: var(--color-heading); font: 500 24px/0.95 var(--font-display); letter-spacing: -0.025em; }
+.brand-name > span { display: block; }
+.header-caption { margin-left: 12px; color: #b6afa3; font-size: 9px; line-height: 1.8; letter-spacing: 0.06em; }
+.header-caption > span { display: block; color: var(--color-muted); font-size: 8px; }
+.main-nav { display: flex; align-items: center; gap: 30px; margin-left: auto; }
+.main-nav > a { position: relative; display: flex; align-items: center; gap: 8px; min-height: 44px; padding-block: 10px; color: #c8c3bb; font-size: 11px; text-decoration: none; transition: color 200ms; }
+.main-nav > a::after { content: ''; position: absolute; bottom: 2px; right: 0; left: 20px; height: 1px; background: var(--color-accent-text); transform: scaleX(0); transform-origin: left; transition: transform 300ms var(--ease-out); }
+.main-nav > a:hover, .main-nav > a[aria-current] { color: #fff; }
+.main-nav > a:hover::after, .main-nav > a[aria-current]::after { transform: scaleX(1); }
+.nav-number { color: var(--color-accent-text); font-size: 8px; }
+.reading-progress { position: absolute; left: 0; bottom: -1px; width: 100%; height: 2px; transform: scaleX(0); transform-origin: left; background: #bc5c54; pointer-events: none; }
+.menu-toggle { display: none; align-items: center; justify-content: center; width: 44px; height: 44px; margin-left: auto; border: 1px solid var(--color-line); color: var(--color-text); background: transparent; }
+@media (max-width: 1050px) { .header-caption { display: none; } .header-inner { gap: 20px; } .main-nav { gap: 24px; } }
+@media (max-width: 700px) {
+  .brand-name { font-size: 23px; }
+  .brand .star-mark { width: 28px; height: 28px; }
+  .menu-toggle { display: flex; }
+  .main-nav { position: absolute; top: 100%; left: 0; right: 0; display: none; margin: 0; padding: 12px var(--gutter) 24px; background: #1a1a1a; border-bottom: 1px solid var(--color-line); box-shadow: 0 16px 30px #0003; }
+  .main-nav.is-open { display: grid; }
+  .main-nav > a { gap: 18px; padding: 16px 0; font-size: 14px; border-bottom: 1px solid var(--color-line); }
+  .main-nav > a::after { display: none; }
+  .nav-number { font-size: 10px; }
+}
